@@ -5,28 +5,85 @@
 	<meta name="veiwport" content="width=device-width, inital-scale=1.0">
 	<title>Page Title</title>
 	<style>
-		.table, .tr, .td {
-			border: 1px solid black;
-			background: solid;
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+		.table {
+			display: inline-flex;
+			border: 1px black;
 			background-color: lightblue;
+			border-style: double;
+			border-radius: 6px;
+			border-spacing: 4px;
+			place-self: right;
+			block-size: ;
+		}
+		.tr, .td {
+			padding: 8px;
+			border: 1px solid black;
+			background-color: lightblue;
+			border-style: double;
+			border-radius: 6px;
 		}
 		body {
 			display: flex;
 			flex-direction: column;
-			background: solid;
-			background-color: lightgrey;
+			background-color: wheat;
+		}
+		details {
+			display: inline-block;
+			padding: 8px;
+  			background-color: lightseagreen;
+  			border: lightblue;
+  			border-style: outset;
+  			box-shadow: 1px 1px 2px #bbbbbb;
+  			cursor: pointer;
+  			text-align: center;
+  			text-decoration: none;
+			color: darkblue;
+		}
+		li, ul {
+			justify-content: center;
+			text-decoration: none;
+			color: darkblue;
 		}
 		.top-pos {
 			display: flex;
 			justify-content: center;
 		}
+		.main_area {
+			display: flex;
+			width: 100vw;
+			gap: 28vw;
+		}
 	</style>
 </head>
 <body>
-	<header>
-		<h1 class="top-pos">The Heading</h1>
-	</header>
-	<div>
+	<div id="the_title_area" >		
+		<header>
+			<h1 class="top-pos">The Heading</h1>
+		</header>
+		<details>
+			<summary class="mnulst">Menu</summary>
+			<menu>
+				<li>
+					<a href="./pages/login.html">Login</a>
+				</li>
+				<hr>
+				<li>
+					<a href="./pages/signup.html">Signup</a>
+				</li>
+				<hr>
+				<li>
+					<a href="./pages/legal.html">Legal Help</a>
+				</li>
+			</menu>
+		</details>
+		<hr>
+	</div>
+	<div class="main_area" id="the_main_area">
 		<p>
 			Our goal is fairly simple we just want to make it easy to get your loved one items to there respective jail and be able to customise it
 			in the way that they would want.
@@ -55,12 +112,18 @@
 				</td>
 			</tr>
 		</table>
-		<details>
-			<summary>Details</summary>
-			<p>this is where you can find our acounts.</p>
-		</details>
+	</div>
+	<div id="the_bottom_area" >
 		<footer>
-			<a href="./pages/about.html">About page</a>
+			<hr>
+			<details>
+				<summary>Details</summary>
+				<menu>
+					<li>
+						<a href="./pages/about.html">About page</a>
+					</li>
+				</menu>
+			</details>
 		</footer>
 	</div>
 </body>
