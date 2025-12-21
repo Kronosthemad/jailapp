@@ -10,18 +10,6 @@
 			background: solid;
 			background-color: lightblue;
 		}
-		.button {
-			  border: none;
-			  color: white;
-			  padding: 16px 32px;
-			  text-align: center;
-			  text-decoration: none;
-			  display: inline-block;
-			  font-size: 16px;
-			  margin: 4px 2px;
-			  transition-duration: 0.4s;
-			  cursor: pointer;
-		}
 		body {
 			display: flex;
 			flex-direction: column;
@@ -35,13 +23,14 @@
 	</style>
 </head>
 <body>
-<h1 class="top-pos">The Heading</h1>
+	<header>
+		<h1 class="top-pos">The Heading</h1>
+	</header>
 	<div>
 		<p>
 			Our goal is fairly simple we just want to make it easy to get your loved one items to there respective jail and be able to customise it
 			in the way that they would want.
 		</p>
-		<button href= ./pages/login.html>login</button>
 		<table class="table">
 			<tr class="tr">
 				<th>Social Media</th>
@@ -66,7 +55,13 @@
 				</td>
 			</tr>
 		</table>
-		<a href="./pages/about.html">About page</a>
+		<details>
+			<summary>Details</summary>
+			<p>this is where you can find our acounts.</p>
+		</details>
+		<footer>
+			<a href="./pages/about.html">About page</a>
+		</footer>
 	</div>
 </body>
 </html>
