@@ -1,32 +1,38 @@
 const crypto = require('crypto');
-// Create a hash object
-const hash = crypto.createHash('sha256');
-const fs = require('java.util.fs')
-const rand = require('java.util.random')
+const fs = require('fs');
 
-let String("usr") = document.getElementByID('usernm')
+document.addEventListener('DOMContentLoaded', () => {
+	const usrInput = document.getElementById('usernm');
+	const pwInput = document.getElementById('paswd');
+	const accept = document.querySelector('input[type="submit"]');
+	const errEl = document.getElementById('err');
 
-let String("pw") = document.getElementByID('paswd')
+	accept.addEventListener('click', (e) => {
+		e.preventDefault();
+		const usr = (usrInput.value || '').trim();
+		const pw = (pwInput.value || '').trim();
 
-let accept = document.getElementByType('submit')
+		if (!usr) {
+			errEl.innerHTML = 'UserName Required';
+			return;
+		}
+		if (usr.length < 8) {
+			errEl.innerHTML = 'username too short';
+			return;
+		}
 
-switch( usr.length ){
-	case undefined:
-		document.getElementByID('err').innerHTML = "UserName Required"
-		break
-	case >= 8:
-		...
-		break
-	default:
-		document.getElementByID('err').innerHTML = "username too short"
-		break
-}
+		const hash = crypto.createHash('sha256');
+		hash.update(usr + pw);
+		const digest = hash.digest('hex');
 
-// Get the digest in hexadecimal format
-// Update the hash with data
-hash.update('usr, pw');
-const digest = hash.digest('hex');
-
-let outfile = rand('.'rand())
-
-fs.out('digest, outfile')
+		const outfile = './' + Math.random().toString(36).slice(2) + '.txt';
+		fs.writeFile(outfile, digest, (err) => {
+			if (err) {
+				console.error(err);
+				errEl.innerHTML = 'Error saving';
+			} else {
+				errEl.innerHTML = 'Saved';
+			}
+		});
+	});
+});
