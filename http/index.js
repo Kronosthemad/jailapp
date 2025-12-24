@@ -1,5 +1,5 @@
-document.getElementById('button')?.addEventListener('click', function() {
-    alert('hello world!');
+document.getElementById('tester')?.addEventListener('click', function() {
+    alert('This Is Just A Test!');
 });
 
 function displayDate() {
