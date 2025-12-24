@@ -1,13 +1,17 @@
 require('dotenv/config');
+const { PrismaClient } = require('@prisma/client');
+
+const prisma = new PrismaClient({
+  log: ['query', 'info', 'warn', 'error'],
+  accelerateUrl: process.env.DATABASE_URL,
+});
 const express = require('express');
 const cors = require('cors');
 const multer = require('multer');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
-const { PrismaClient } = require('@prisma/client');
 
-const prisma = new PrismaClient({ log: ['query', 'info', 'warn', 'error'] });
 const app = express();
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
 const JWT_SECRET = process.env.JWT_SECRET || 'change_this_in_prod';
