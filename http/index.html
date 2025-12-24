@@ -76,10 +76,19 @@
 	<hr class="hr">
 	<div class="main_area" id="the_store_area">
 		<ul class="store_examples">
-			<img class="image_block" src="./images/hoodie.jpeg" alt="Store A">
-			<img class="image_block" src="./images/shoes.jpeg" alt="Store B">
-			<img class="image_block" src="./images/canvas.jpeg" alt="Store C">
+			<img class="image_block" src="./images/hoodie.jpeg" alt="Store A" usemap="hoodie" width="200" height="200">
+			<img class="image_block" src="./images/shoes.jpeg" alt="Store B" usemap="shoes" width="200" height="200">
+			<img class="image_block" src="./images/canvas.jpeg" alt="Store C" usemap="canvas" width="200" height="200">
 		</ul>
+		<map name="hoodie">
+			<area shape="rect" coords="0,0,200,200" href="./pages/store.html">
+		</map>
+		<map name="shoes">
+			<area shape="rect" coords="0,0,200,200" href="./pages/store.html">
+		</map>
+		<map name="canvas">
+			<area shape="rect" coords="0,0,200,200" href="./pages/store.html">
+		</map>
 	</div>
 	<div id="the_bottom_area" >
 		<footer class="footer">
