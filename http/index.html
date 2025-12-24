@@ -3,122 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="veiwport" content="width=device-width, inital-scale=1.0">
-	<title>Page Title</title>
-	<style>
-		*,
-		*::before,
-		*::after {
-			box-sizing: border-box;
-		}
-		.table {
-			display: inline-flex;
-			box-sizing: border-box;
-			flex-direction: column;
-			width: 100%;
-			max-width: 300px;
-			border: 1px black;
-			background-color: lightblue;
-			border-style: double;
-			border-radius: 6px;
-			border-spacing: 4px;
-			place-self: right;
-		}
-		.tr, .td {
-			padding: 8px;
-			border: 1px solid black;
-			background-color: lightblue;
-			border-style: double;
-			border-radius: 6px;
-		}
-		body {
-			display: flex;
-			flex-direction: column;
-			background-color: wheat;
-		}
-		details {
-			display: inline-block;
-			padding: 8px;
-			background-color: lightseagreen;
-			border: lightblue;
-			border-style: outset;
-			box-shadow: 1px 1px 2px #bbbbbb;
-			cursor: pointer;
-			text-align: center;
-			text-decoration: none;
-			color: darkblue;
-		}
-		li, ul {
-			justify-content: center;
-			text-decoration: none;
-			color: darkblue;
-		}
-		.top-pos {
-			display: flex;
-			justify-content: center;
-		}
-		.main_area {
-			display: flex;
-			width: 100vw;
-			gap: 28vw;
-		}
-		.mnulst {
-			font-size: 24px;
-			font-weight: bold;
-			float: inline-end;
-			color: darkblue;
-		}
-		.store_examples {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 10px;
-			width: 100vw;
-			text-align: center;
-			font-size: 24px;
-			font-weight: bold;
-			color: darkblue;
-		}
-		.my_clock {
-			display:inline-flex;
-			box-sizing: border-box;
-			border: 1px solid transparent;
-			backface-visibility: hidden;
-			background-attachment: fixed;
-			border-style: double;
-			border-radius: 6px;
-			text-align: center;
-			justify-content: center;
-			align-self: center;
-			width: 100vw;
-			height: 100px;
-			font-size: 18px;
-			font-weight: bold;
-			color: darkblue;
-			margin-left: 3vw;
-		}
-		.clock_table {
-			display: block;
-			box-sizing: border-box;
-			flex-direction: column;
-			width: 100%;
-			height: 100%;
-			max-width: fit-content;
-			max-height: fit-content;
-			border: 1px black;
-			background-color: lightblue;
-			background-size: fit-content;
-			border-style: double;
-			border-radius: 6px;
-			border-spacing: 4px;
-			place-self: center;
-		}
-		</style>
+	<title>Pics By You</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="index.js" defer></script>
 </head>
 <body>
 	<div id="the_title_area" >
 		<hr>		
 		<header>
-			<h1 class="top-pos">The Heading</h1>
+			<h1 class="top-pos">Pics By You</h1>
 			<div class="my_clock">
 				<table class="clock_table">
 					<tr>
@@ -127,13 +20,9 @@
 						</td>
 					</tr>
 				</table>
-				<script id="my_clock">
-					function displayDate() {
-						document.getElementById('time').innerHTML = String(new Date());
-					}
-					setInterval(displayDate, 1000);
-				</script>
-			</div>
+
+			</div>			</details>
+
 			<hr>
 		</header>
 		<details>
@@ -156,7 +45,7 @@
 	</div>
 	<div class="main_area" id="the_main_area">
 		<p>
-			Our goal is fairly simple we just want to make it easy to get your loved one items to there respective jail and be able to customise it
+			Our goal is fairly simple we just want to make it easy to get your loved one items to there respective jail and be able to customize it
 			in the way that they would want.
 		</p>
 		<table class="table">
@@ -184,8 +73,17 @@
 			</tr>
 		</table>
 	</div>
+	<h2 class="top-pos">Store Examples</h2>
+	<hr>
+	<div class="main_area" id="the_store_area">
+		<ul class="store_examples">
+			<img class="image_block" src="./images/hoodie.jpeg" alt="Store A">
+			<img class="image_block" src="./images/shoes.jpeg" alt="Store B">
+			<img class="image_block" src="./images/canvas.jpeg" alt="Store C">
+		</ul>
+	</div>
 	<div id="the_bottom_area" >
-		<footer>
+		<footer class="footer">
 			<hr>
 			<details>
 				<summary class="mnulst">Details</summary>
@@ -196,15 +94,6 @@
 				</menu>
 			</details>
 		</footer>
-	</div>
-	<div id="store_examples">
-		<h2>Store Examples</h2>
-		<p>Here are some examples of stores that we have worked with:</p>
-		<ul>
-			<li>Store A</li>
-			<li>Store B</li>
-			<li>Store C</li>
-		</ul>
 	</div>
 </body>
 </html>

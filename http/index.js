@@ -1,5 +1,9 @@
+document.getElementById('button')?.addEventListener('click', function() {
+    alert('hello world!');
+});
 
-document.getElementById('button').add
-    EventListener('click', function function_name() {
-        alert('hello world!');
-    });
+function displayDate() {
+    const el = document.getElementById('time');
+    if (el) el.innerHTML = String(new Date());
+}
+setInterval(displayDate, 1000);

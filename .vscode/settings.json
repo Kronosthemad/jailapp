@@ -2,5 +2,12 @@
     "sonarlint.connectedMode.project": {
         "connectionId": "kronosthemad",
         "projectKey": "Kronosthemad_jailapp"
-    }
+    },
+    "cSpell.words": [
+        "inital",
+        "Liscense",
+        "mnulst",
+        "Tien",
+        "veiwport"
+    ]
 }
