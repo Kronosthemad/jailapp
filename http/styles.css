@@ -18,6 +18,13 @@
 	place-self: right;
 	margin-right: 10px;
 }
+.error {
+	display: inline-block;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: red;
+}
 .tr, .td {
 	padding: 8px;
 	border: 1px solid black;
@@ -173,4 +180,26 @@ ul {
 	border-style: outset;
 	border-color: lightblue;
 	box-shadow: 1px 1px 2px #bbbbbb;
+}
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.product_image {
+	width: 200px;
+	height: 200px;
+	border-radius: 6px;
+	border-style: outset;
+	border-color: lightblue;
+	box-shadow: 1px 1px 2px #bbbbbb;
+}
+.product_name {
+	font-size: 24px;
+	font-weight: bold;
+}
+.product_price {
+	font-size: 24px;
+	font-weight: bold;
 }

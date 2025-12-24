@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Document</title>
+    <title>Store</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="../src/store.js" defer></script>
 </head>
 <body>
     <h1 class="top-pos">store_examples</h1>
-    <div class="main_area" id="the_store_area">
+    <hr class="hr">
+    <div class="store_examples">
         <p>Here are some examples from our store:</p>
-        <ul>
-            <span class="store_examples">   
-                <img src="../images/canvas.jpeg" alt="canvas" class="img-size">
-                <a href="./login.html" target="_blank">Canvas</a>
-            </span>
-            <span class="store_examples">   
-                <img src="../images/hoodie.jpeg" alt="hoodie" class="img-size">
-                <a href="./login.html" target="_blank">Flower</a>
-            </span>
-            <span class="store_examples">   
-                <img src="../images/shoes.jpeg" alt="shoes" class="img-size">
-                <a href="./login.html" target="_blank">Pen</a>
-            </span>
-        </ul>
-    </div> 
+        <div class="product" id="products"></div>
+        <div class="error" id="error"></div>
+    </div>
 </body>
