@@ -21,17 +21,22 @@ function readJSON(file) {
   try {
     return JSON.parse(fs.readFileSync(path.join(__dirname, 'data', file), 'utf8'));
   } catch (err) {
+    console.error(err);
     return [];
   }
 }
 
 function writeJSON(file, data) {
-  fs.writeFileSync(path.join(__dirname, 'data', file), JSON.stringify(data, null, 2));
+  try {
+    fs.writeFileSync(path.join(__dirname, 'data', file), JSON.stringify(data, null, 2));
+  } catch (err) {
+    console.error(err);
+  }
 }
 
-// Routes
+// API Routes (must come before static file serving)
 app.get('/api/products', (req, res) => {
-  const products = readJSON('products.json');
+  const products = readJSON('../../data/products.json');
   res.json(products);
 });
 
@@ -44,7 +49,7 @@ app.post('/api/signup', async (req, res) => {
     return res.status(400).json({ error: 'Username must be at least 8 characters' });
   }
 
-  const users = readJSON('users.json');
+  const users = readJSON('../../data/users.json');
   const existingUser = users.find(u => u.username === username);
   if (existingUser) {
     return res.status(400).json({ error: 'Username already exists' });
@@ -52,7 +57,7 @@ app.post('/api/signup', async (req, res) => {
 
   const hashedPassword = await bcrypt.hash(password, 10);
   users.push({ username, password: hashedPassword });
-  writeJSON('users.json', users);
+  writeJSON('../../data/users.json', users);
 
   req.session.user = { username };
   res.json({ message: 'Signup successful', user: { username } });
@@ -64,7 +69,7 @@ app.post('/api/login', async (req, res) => {
     return res.status(400).json({ error: 'Username and password required' });
   }
 
-  const users = readJSON('users.json');
+  const users = readJSON('../../data/users.json');
   const user = users.find(u => u.username === username);
   if (!user || !(await bcrypt.compare(password, user.password))) {
     return res.status(401).json({ error: 'Invalid credentials' });
@@ -81,6 +86,14 @@ app.post('/api/logout', (req, res) => {
     }
     res.json({ message: 'Logout successful' });
   });
+});
+
+// Static file serving
+app.use(express.static(path.join(__dirname, '..')));
+
+// Catch-all route
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 // Start server

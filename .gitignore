@@ -3,3 +3,7 @@
 *.env.local
 /generated/prisma
 node_modules
+.vscode
+.gemini/
+gha-creds-*.json
+.github
