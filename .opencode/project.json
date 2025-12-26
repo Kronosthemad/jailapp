@@ -1,0 +1,31 @@
+{
+  "id": "eddaa0df6897ccc9331019d727208a5163b99812",
+  "name": "jailapp",
+  "worktree": "/home/kronos/www/jailapp",
+  "vcs": "git",
+  "theme": "github",
+  "theme_mode": "dark",
+  "model": {
+    "provider": "opencode",
+    "default": "big-pickle",
+    "fallback": "grok-code"
+  },
+  "agents": {
+    "primary": ["build", "plan", "summary", "title"],
+    "subagent": ["explore", "general"]
+  },
+  "tools": {
+    "enabled": ["bash", "read", "write", "edit", "glob", "grep", "task", "webfetch", "websearch", "codesearch", "skill", "todowrite", "todoread"],
+    "bash": {
+      "timeout": 120000,
+      "default_workdir": "/home/kronos/www/jailapp"
+    }
+  },
+  "auth": {
+    "providers": ["copilot", "anthropic"]
+  },
+  "time": {
+    "created": 1766597836126,
+    "updated": 1766703548769
+  }
+}

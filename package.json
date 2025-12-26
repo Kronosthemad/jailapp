@@ -1,25 +1,24 @@
 {
-  "name": "@Kronosthemad/test-backend",
+  "name": "jailapp",
   "version": "1.0.0",
   "description": "this repository is for a basic store that i am putting together it is not moving very fast because it is a learning prosses the entire time i will be working on it daily i just dont know  how fast it will be done. i am still trying to figure out whatliscence i should put on it so i am not oposed to any contributing at the moment but i need to discuss it with my team to get a licence but i",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/Kronosthemad/jailapp#readme",
+  "bugs": {
+    "url": "https://github.com/Kronosthemad/jailapp/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kronosthemad/jailapp.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Kronosthemad/jailapp/issues"
+  "main": "./http/src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/Kronosthemad/jailapp#readme",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",
     "express": "^5.2.1",
     "express-session": "^1.18.2"
