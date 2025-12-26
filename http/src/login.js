@@ -1,10 +1,10 @@
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
     // Get references to the UI elements
-    const usrInput = document.getElementById('usernm');
-    const pwInput = document.getElementById('paswd');
-    const accept = document.querySelector('input[type="submit"]');
-    const errEl = document.getElementById('err');
+    let usrInput = document.getElementById('usernm');
+    let pwInput = document.getElementById('paswd');
+    let accept = document.querySelector('input[type="submit"]');
+    let errEl = document.getElementById('err');
 
     // Add a click event listener to the login button
     accept.addEventListener('click', async (e) => {
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         // Get and trim the username and password from the input fields
-        const username = (usrInput.value || '').trim();
-        const password = (pwInput.value || '').trim();
+        let username = (usrInput.value || '').trim();
+        let password = (pwInput.value || '').trim();
 
         // --- Input Validation ---
         if (!username) {
@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // --- API Call to Login Endpoint ---
-            const response = await fetch('/api/login', {
+            let response = await fetch('/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })
             });
 
-            const data = await response.json();
+            let data = await response.json();
 
             // --- Response Handling ---
             if (response.ok) {
