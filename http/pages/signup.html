@@ -8,6 +8,58 @@
 	<script src="../src/signup.js" defer></script>
 </head>
 <body>
+	   <div class="topnav" id="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Home
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="text" href="../index.html">Home</a>
+      <a class="text" href="./store.html">Store</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Login
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="text" href="./login.html">Login</a>
+      <a class="text" href="./signup.html">Signup</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Contact
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="text" href="./facebook.html">Facebook</a>
+      <a class="text" href="./instagram.html">Instagram</a>
+      <a class="text" href="./X.html">X</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">About
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="text"  href="./about.html">About</a>
+      <a class="text" href="./legal.html">Legal</a>
+    </div>
+  </div>
+  <a style="display: none;" href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+<script>
+        function myFunction() {
+          var x = document.getElementById("navbar");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+  </a>
+  </div>
 	<div id="the_title_area">
 		<header>
 			<h1>Signup</h1>

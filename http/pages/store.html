@@ -6,6 +6,58 @@
     <script src="../index.js" defer></script>
 </head>
 <body id="store">
+    <div class="topnav" id="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Home
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="text" href="../index.html">Home</a>
+      <a class="text" href="./store.html">Store</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Login
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="text" href="./login.html">Login</a>
+      <a class="text" href="./signup.html">Signup</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Contact
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="text" href="./facebook.html">Facebook</a>
+      <a class="text" href="./instagram.html">Instagram</a>
+      <a class="text" href="./X.html">X</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">About
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="text"  href="./about.html">About</a>
+      <a class="text" href="./legal.html">Legal</a>
+    </div>
+  </div>
+  <a style="display: none;" href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+<script>
+        function myFunction() {
+          var x = document.getElementById("navbar");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+  </a>
+  </div>
     <h1 class="top-pos">store_examples</h1>
     <div class="my_clock">
 		<table class="clock_table">
@@ -17,9 +69,41 @@
 		</table>
 	</div>
     <hr class="hr">
-    <div class="store_examples">
-        <p>Here are some examples from our store:</p>
-        <div class="product" id="products"></div>
-        <div class="error" id="error"></div>
+    <div class="main_store_area">
+        <div class="image_block"></div>
+            <div class="product">
+                <div class="product_display">
+                    <img class="product_image" src="../images/canvas.jpeg" alt="Example Product">
+                    <div class="image_description">
+                        <h2 class="product_name">Example Product</h2>
+                        <p class="product_description">This is an example product description. It highlights the features and benefits of the product.</p>
+                        <p class="product_price">Price: $19.99</p>
+                        <button class="buy_button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product_display">
+                    <img class="product_image" src="../images/shoes.jpeg" alt="Example Product">
+                    <div class="image_description">
+                        <h2 class="product_name">Example Product</h2>
+                        <p class="product_description">This is an example product description. It highlights the features and benefits of the product.</p>
+                        <p class="product_price">Price: $19.99</p>
+                        <button class="buy_button">Buy Now</button>
+                    </div>
+                </div> 
+            </div>       
+            <div class="product">
+                <div class="product_display">
+                    <img class="product_image" src="../images/hoodie.jpeg" alt="Example Product">
+                    <div class="image_description">
+                        <h2 class="product_name">Example Product</h2>
+                        <p class="product_description">This is an example product description. It highlights the features and benefits of the product.</p>
+                        <p class="product_price">Price: $19.99</p>
+                        <button class="buy_button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
