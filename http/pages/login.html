@@ -4,10 +4,21 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../../java/login.java"></script>
 </head>
 <body>
 	<div id="the_title_area">
 		<h1>Login Example</h1>
 	</div>
+    <div id="the_main_area">
+        <form action="login">
+            <label for="usrnm">User Name:</label>
+                <input type="text" name="usrnm"><br><br>
+            <label for="pswd">Password:</label>
+            <input type="password" name="pswd"><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
 </body>
 </html>

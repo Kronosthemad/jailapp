@@ -1,1 +1,10 @@
 *.sublime*
+.vscode/
+.DS_Store
+node_modules/
+.env
+*.log
+.editorconfig
+.opencode/
+.gemini/
+.github/
