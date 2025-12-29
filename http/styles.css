@@ -115,7 +115,6 @@ ul {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-                <div class="produ
 	gap: 10px;
 	width: 100vw;
 	text-align: center;
@@ -190,7 +189,7 @@ ul {
     border: outset;
     width: 240px;
     height: auto;
-    background-color: navy;
+    background-color: lightseagreen;
     border-color: lightblue;
     border-radius: 6px;
     padding: 10px;
@@ -364,7 +363,7 @@ buy_button {
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #555;
-  color: darkblue;
+  color: black;
 }
 
 /* Add a grey background to dropdown links on hover */
@@ -378,7 +377,6 @@ buy_button {
   display: block;
 }
 
-                <div class="produ
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
