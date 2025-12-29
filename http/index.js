@@ -8,8 +8,8 @@ setInterval(displayDate, 1000);
 
 const fs = require('fs');
 const path = require('path');
-// Get the products for the store
-let products = readJSON("./data/products.json");
+// Get the submit button
+let submit = document.getElementById('submision');
 
 // Get the user information 
 let users = readJSON("./data/users.json");
@@ -37,24 +37,8 @@ function writeJSON(file, data) {
   }
 }
 
- function fillStore(products) {
-    try {
-    let productsDiv = document.getElementById('products');
-    productsDiv.innerHTML = products.map(product => `
-        <div class="store_examples">
-                    <img src="/${product.image}" alt="${product.name}" class="img-size">
-                    <h3><a href="../data/products.json" target="_blank">${product.name}</a></h3>
-                    <p class="price">$${product.price}</p>
-                    <p class="description">${product.description}</p>
-                </div>
-        `).join('');
-    } catch {
-        console.error("write failed")
-    }
-}
-
 try {  
-  accept.addEventListener('click', async (e) => {
+  accept.addEventListener('click', async (LoginAtempt, submision) => {
     //Prevent the default
     e.preventDefault();
 
