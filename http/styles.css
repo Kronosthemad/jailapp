@@ -421,3 +421,6 @@ buy_button {
   display: none;
   border: none;
 }
+.license_area {
+  align-content: center;
+}
