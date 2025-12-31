@@ -1,8 +1,8 @@
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
     // Get references to the UI elements
-    let usrInput = document.getElementById('usernm');
-    let pwInput = document.getElementById('paswd');
+    let usrInput = document.getElementById('username');
+    let pwInput = document.getElementById('password');
     let accept = document.querySelector('input[type="submit"]');
     let errEl = document.getElementById('err');
 
